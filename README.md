@@ -1,6 +1,4 @@
-Bilkul 👍 Main tumhe **clean, directly-paste-ready `README.md`** de raha hoon. Is version me code blocks properly close hain, isliye poora README red/code format me nahi jayega.
 
-**Important:** Neeche ke `README` content ko hi copy karke GitHub ke `README.md` me paste karna. ` ```markdown ` wala outer wrapper copy **mat** karna.
 
 # 🌪️ DisasterGuard AI
 
