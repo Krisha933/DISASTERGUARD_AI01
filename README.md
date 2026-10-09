@@ -462,6 +462,171 @@ The interface combines risk cards, maps, alerts and visual indicators into one d
 
 ---
 
+
+
+---
+
+# 🆘 Community Relief & Emergency Assistance System
+
+DisasterGuard AI includes a Community Relief and Emergency Assistance System designed to connect people who need disaster-related assistance with available helpers and relief sponsors.
+
+The system provides a structured workflow for submitting relief requests, managing requests, coordinating helpers, tracking delivery status, and recording sponsorship information.
+
+## ✨ Key Features
+
+| **Feature**                  | **Description**                                                               |
+| ---------------------------- | ----------------------------------------------------------------------------- |
+| 📝 Relief Request Submission | Allows users to submit requests for disaster-related assistance.              |
+| 📍 Location-Based Requests   | Records the location where assistance is required.                            |
+| 👥 People Count              | Captures the number of people requiring help.                                 |
+| 🍱 Essential Needs           | Supports recording requirements such as food and water.                       |
+| 🚨 Emergency Priority        | Supports emergency priority levels such as Critical, High, and Medium.        |
+| 🆔 Request Tracking          | Generates a unique request ID for a relief request.                           |
+| 🤝 Helper Management         | Supports retrieving helpers associated with a relief request.                 |
+| ✅ Request Acceptance         | Allows a relief request to be accepted through the backend workflow.          |
+| 🚚 Delivery Tracking         | Supports marking relief delivery as started or delivered.                     |
+| 💝 Relief Sponsorship        | Records sponsorship information associated with a relief request.             |
+| 📂 JSON-Based Storage        | Stores relief requests, helpers, and sponsor information in local JSON files. |
+
+## 🔄 How the Relief Assistance System Works
+
+```text
+       🆘 Person Needs Help
+                |
+                ▼
+       📝 Submit Relief Request
+                |
+                ▼
+       📍 Validate Request Details
+                |
+                ▼
+       🆔 Generate Request ID
+                |
+                ▼
+       📂 Save Relief Request
+                |
+                ▼
+       🤝 Helper / Sponsor Workflow
+                |
+                ▼
+       ✅ Accept Request
+                |
+                ▼
+       🚚 Start Relief Delivery
+                |
+                ▼
+       📦 Mark Delivery as Completed
+```
+
+## 🔌 Relief Assistance API Endpoints
+
+The Flask backend includes the following endpoints for the relief assistance workflow.
+
+| **Method** | **Endpoint**                                 | **Purpose**                                           |
+| ---------- | -------------------------------------------- | ----------------------------------------------------- |
+| `POST`     | `/api/relief/request`                        | Creates a new relief request.                         |
+| `GET`      | `/api/relief/requests`                       | Retrieves stored relief requests.                     |
+| `GET`      | `/api/relief/helpers/<request_id>`           | Retrieves helpers associated with a request.          |
+| `POST`     | `/api/relief/request/<request_id>/accept`    | Accepts a relief request.                             |
+| `POST`     | `/api/relief/request/<request_id>/start`     | Updates the request to indicate delivery has started. |
+| `POST`     | `/api/relief/request/<request_id>/delivered` | Marks the relief delivery as completed.               |
+| `POST`     | `/api/relief/request/<request_id>/sponsor`   | Records sponsorship information for a request.        |
+
+## 📁 Relief System Data Storage
+
+The project includes JSON files for storing relief-related information.
+
+```text
+database/
+├── relief_requests.json
+├── relief_helpers.json
+└── relief_sponsors.json
+```
+
+These files support the prototype's relief-request, helper, and sponsorship workflows.
+
+## 🎯 Benefits of the Relief Assistance System
+
+* Helps organise disaster-related assistance requests.
+* Keeps request details together in a structured format.
+* Supports tracking requests through different delivery stages.
+* Provides a workflow for connecting requests with helpers.
+* Records sponsorship information for relief assistance.
+* Demonstrates how software can support community-oriented disaster response.
+
+## ⚠️ Important Limitations
+
+The relief assistance system is a prototype that uses local JSON files. It is not a verified emergency dispatch service, and it does not guarantee that helpers, sponsors, supplies, or deliveries are available.
+
+Before real-world deployment, the system would require user authentication, access control, privacy protection, secure data storage, request verification, and reliable coordination with authorised relief organisations.
+
+---
+
+# 🧭 Advanced Route Comparison & Geocoding
+
+DisasterGuard AI also includes backend functionality for location geocoding and comparing alternative driving routes.
+
+## ✨ Key Features
+
+* 📍 **Destination Geocoding:** Converts a place or destination query into geographic information using an external geocoding service.
+* 🛣️ **Alternative Route Comparison:** Requests alternative driving routes for a journey.
+* 📏 **Distance Analysis:** Supports displaying route-distance information when returned by the routing service.
+* ⏱️ **Travel Duration:** Supports estimated journey duration when available.
+* ⚠️ **Risk-Aware Travel Support:** Combines route information with the project's risk-analysis approach to help users compare travel options.
+
+## 🔄 Route Comparison Workflow
+
+```text
+       📍 Enter Destination
+                |
+                ▼
+       🌐 Geocode Location
+                |
+                ▼
+       🛣️ Generate Route Options
+                |
+                ▼
+       📏 Compare Distance
+                |
+                ▼
+       ⏱️ Compare Duration
+                |
+                ▼
+       ⚠️ Review Available Risk Information
+                |
+                ▼
+       🧭 Present Route Comparison
+```
+
+### API Endpoints
+
+* `GET /geocode` — handles location geocoding.
+* `GET /compare-routes` — handles alternative route comparison.
+* `GET /safe-route` — provides destination-related risk analysis.
+
+The exact query parameters and response structure depend on the current Flask implementation and the availability of external services.
+
+### ⚠️ Route Safety Note
+
+A route that appears shorter or has a lower estimated risk is not necessarily safe during an active disaster. The prototype may not have verified live information about road closures, flooding, evacuation orders, or emergency access. Always follow official instructions from local authorities.
+
+---
+
+# 🧪 Testing the Additional Features
+
+The following manual tests can be used to check the backend functionality.
+
+1. Start the Flask application using `python app.py`.
+2. Open `http://127.0.0.1:5000` to check whether the dashboard loads.
+3. Test the flood prediction and historical-risk endpoints using the example requests documented above.
+4. Test the geocoding and route-comparison endpoints while internet access and the external services are available.
+5. Use a REST client such as Postman to submit a relief request with fictional test data.
+6. Verify that the request is stored and appears in the relief-request listing.
+7. Test the accept, start, delivered, and sponsor workflows using the test request ID.
+
+These are manual test instructions, not a claim that all features have passed runtime testing.
+
+
 # 🧩 Technology Stack
 
 ## Backend
