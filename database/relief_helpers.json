@@ -1,0 +1,46 @@
+[
+    {
+        "helper_id": "HELPER-001",
+        "name": "Patna Relief Center",
+        "type": "Verified NGO",
+        "location": "Patna, Bihar",
+        "distance_km": 2.4,
+        "services": [
+            "Food",
+            "Drinking Water",
+            "Medicine"
+        ],
+        "phone": "9000000001",
+        "status": "Available",
+        "verified": true
+    },
+    {
+        "helper_id": "HELPER-002",
+        "name": "Bihar Emergency Volunteers",
+        "type": "Verified Volunteer",
+        "location": "Patna, Bihar",
+        "distance_km": 4.1,
+        "services": [
+            "Food",
+            "Drinking Water",
+            "Rescue"
+        ],
+        "phone": "9000000002",
+        "status": "Available",
+        "verified": true
+    },
+    {
+        "helper_id": "HELPER-003",
+        "name": "Community Medical Store",
+        "type": "Verified Local Partner",
+        "location": "Patna, Bihar",
+        "distance_km": 3.2,
+        "services": [
+            "Medicine",
+            "Drinking Water"
+        ],
+        "phone": "9000000003",
+        "status": "Available",
+        "verified": true
+    }
+]

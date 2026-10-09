@@ -9,7 +9,6 @@
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-   
 
     <!-- Leaflet CSS -->
     <link
@@ -42,113 +41,45 @@
         <div class="tagline">
             Predict • Warn • Protect
         </div>
-<nav class="sidebar-navigation">
 
-    <!-- DASHBOARD -->
-    <a href="#dashboard"
-       class="sidebar-link active"
-       data-section="dashboard">
-        <span>📊</span>
-        <span>Dashboard</span>
-    </a>
+        <nav>
 
-    <!-- RISK MAP -->
-    <a href="#risk-map"
-       class="sidebar-link"
-       data-section="risk-map">
-        <span>🗺️</span>
-        <span>Risk Map</span>
-    </a>
+            <a href="#" class="active">
+                <span>📊</span>
+                Dashboard
+            </a>
 
-    <!-- FLASH FLOOD -->
-    <a href="#flash-flood"
-       class="sidebar-link"
-       data-section="flash-flood">
-        <span>🌊</span>
-        <span>Flash Flood</span>
-    </a>
+            <a href="#">
+                <span>🗺️</span>
+                Risk Map
+            </a>
 
-    <!-- WEATHER -->
-    <a href="#weather"
-       class="sidebar-link"
-       data-section="weather">
-        <span>🌦️</span>
-        <span>Weather Risk</span>
-    </a>
+            <a href="#">
+                <span>📚</span>
+                Historical Data
+            </a>
 
-    <!-- AI ANALYSIS -->
-    <a href="#ai-analysis"
-       class="sidebar-link"
-       data-section="ai-analysis">
-        <span>🧠</span>
-        <span>AI Analysis</span>
-    </a>
+            <a href="#">
+                <span>🔔</span>
+                Alerts
+            </a>
 
-    <!-- FORECAST -->
-    <a href="#forecast"
-       class="sidebar-link"
-       data-section="forecast">
-        <span>🔮</span>
-        <span>AI Forecast</span>
-    </a>
+            <a href="#">
+                <span>🛟</span>
+                Safety
+            </a>
 
-    <!-- SAFE ROUTE -->
-    <a href="#safe-route"
-       class="sidebar-link"
-       data-section="safe-route">
-        <span>🛣️</span>
-        <span>Safe Route</span>
-    </a>
+            <a href="#">
+                <span>📢</span>
+                Reports
+            </a>
 
-    <!-- EMERGENCY -->
-    <a href="#emergency"
-       class="sidebar-link emergency"
-       data-section="emergency">
-        <span>🚨</span>
-        <span>Emergency</span>
-    </a>
+            <a href="#" class="emergency">
+                <span>🚨</span>
+                Emergency Mode
+            </a>
 
-    <!-- AI COPILOT -->
-    <a href="#ai-copilot"
-       class="sidebar-link"
-       data-section="ai-copilot">
-        <span>🤖</span>
-        <span>AI Copilot</span>
-    </a>
-
-    <!-- COMMUNITY -->
-    <a href="#community"
-       class="sidebar-link"
-       data-section="community">
-        <span>📢</span>
-        <span>Community SOS</span>
-    </a>
-
-    <!-- WHAT IF -->
-    <a href="#what-if"
-       class="sidebar-link"
-       data-section="what-if">
-        <span>🎮</span>
-        <span>What-If Simulator</span>
-    </a>
-
-    <!-- OFFLINE -->
-    <a href="#offline"
-       class="sidebar-link"
-       data-section="offline">
-        <span>📴</span>
-        <span>Offline Mode</span>
-    </a>
-
-    <!-- HISTORICAL -->
-    <a href="#historical"
-       class="sidebar-link"
-       data-section="historical">
-        <span>📊</span>
-        <span>Historical Data</span>
-    </a>
-
-</nav>
+        </nav>
 
         <div class="sidebar-bottom">
 
@@ -418,394 +349,177 @@
         ================================================== -->
 
         <section class="dashboard-grid">
-            <!-- =========================================================
-     🔮 RISK PREDICTION — FUTURISTIC AI FORECAST
-========================================================= -->
-
-<section class="risk-prediction-3d">
-
-    <!-- HEADER -->
-    <div class="prediction-top">
-
-        <div class="prediction-title">
-
-            <div class="prediction-icon">
-                🧠
-            </div>
-
-            <div>
-                <h2>
-                    Risk <span>Prediction</span>
-                </h2>
-
-                <p>
-                    ◷ Next 6 hours
-                </p>
-            </div>
-
-        </div>
-
-        <div class="ai-powered-badge">
-            <span class="ai-wave">〰</span>
-            AI Powered Analysis
-        </div>
-
-    </div>
 
 
-    <!-- FORECAST AREA -->
-    <div class="prediction-main">
+            <!-- =================================================
+                 MAP
+            ================================================== -->
 
+            <div class="panel map-panel">
 
-        <!-- NOW -->
-        <div class="forecast-card forecast-now">
+                <div class="panel-header">
 
-            <div class="forecast-time">
-                NOW
-            </div>
+                    <div>
 
-            <div class="weather-icon">
-                🌤️
-            </div>
+                        <h2>
+                            🗺️ Multi-Hazard Risk Map
+                        </h2>
 
-            <div class="forecast-risk">
-
-                <strong id="riskNow">32</strong>
-
-                <span>/100</span>
-
-            </div>
-
-            <div class="forecast-status" id="levelNow">
-                WATCH
-            </div>
-
-            <div class="forecast-base"></div>
-
-        </div>
-
-
-        <!-- +1 HR -->
-        <div class="forecast-card forecast-one">
-
-            <div class="forecast-time">
-                +1 HR
-            </div>
-
-            <div class="weather-icon">
-                🌧️
-            </div>
-
-            <div class="forecast-risk">
-
-                <strong id="risk1hr">38</strong>
-
-                <span>/100</span>
-
-            </div>
-
-            <div class="forecast-status" id="level1hr">
-                WATCH
-            </div>
-
-            <div class="forecast-base"></div>
-
-        </div>
-
-
-        <!-- +3 HR -->
-        <div class="forecast-card forecast-three">
-
-            <div class="forecast-time">
-                +3 HR
-            </div>
-
-            <div class="weather-icon">
-                ⛈️
-            </div>
-
-            <div class="forecast-risk">
-
-                <strong id="risk3hr">47</strong>
-
-                <span>/100</span>
-
-            </div>
-
-            <div class="forecast-status" id="level3hr">
-                WATCH
-            </div>
-
-            <div class="forecast-base"></div>
-
-        </div>
-
-
-        <!-- +6 HR -->
-        <div class="forecast-card forecast-six">
-
-            <div class="forecast-time">
-                +6 HR
-            </div>
-
-            <div class="weather-icon">
-                🌩️
-            </div>
-
-            <div class="forecast-risk">
-
-                <strong id="risk6hr">61</strong>
-
-                <span>/100</span>
-
-            </div>
-
-            <div class="forecast-status" id="level6hr">
-                WARNING
-            </div>
-
-            <div class="forecast-base"></div>
-
-        </div>
-
-
-        <!-- OVERALL RISK -->
-        <div class="overall-risk-card">
-
-            <h3>
-                Overall Risk Level
-            </h3>
-
-            <div class="risk-gauge">
-
-                <div class="gauge-ring">
-
-                    <div class="gauge-inner">
-
-                        <div class="shield-icon">
-                            🛡️
-                        </div>
-
-                        <strong id="overallRiskPrediction">
-                            LOW
-                        </strong>
+                        <p>
+                            Live location-based disaster risk zones
+                        </p>
 
                     </div>
 
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- AI ANALYSIS -->
-    <div class="ai-analysis-box">
-
-        <div class="ai-robot">
-            🤖
-        </div>
-
-        <div class="ai-analysis-content">
-
-            <div class="ai-analysis-title">
-
-                <span>
-                    🛡️ AI Analysis
-                </span>
-
-                <small>
-                    ● ACTIVE
-                </small>
-
-            </div>
-
-            <p id="predictionMessage">
-                AI estimates the disaster risk for the next few
-                hours based on current weather conditions,
-                historical patterns and ML prediction.
-            </p>
-
-        </div>
-
-        <div class="ai-wave-line">
-            〰〰〰〰〰
-        </div>
-
-    </div>
-
-</section>
-
-
-
-            <!-- =========================================================
-     🗺️ RISK MAP SCREEN
-========================================================= -->
-
-<section
-    id="riskMapScreen"
-    class="feature-panel"
-    data-feature="risk-map">
-
-    <div class="panel map-panel">
-
-        <!-- MAP HEADER -->
-
-        <div class="panel-header">
-
-            <div>
-
-                <h2>
-                    🗺️ Multi-Hazard Risk Map
-                </h2>
-
-                <p>
-                    Live location-based disaster risk zones
-                </p>
-
-            </div>
-
-
-            <button
-                type="button"
-                class="map-btn"
-                id="viewFullMapBtn">
-
-                🗺️ View Full Map
-
-            </button>
-
-        </div>
-
-
-        <!-- MAP CONTAINER -->
-
-        <div class="map-placeholder">
-
-            <div class="map-container">
-
-
-                <!-- LOCATION SEARCH -->
-
-                <div class="location-search">
-
-                    <input
-                        type="text"
-                        id="locationSearch"
-                        placeholder="🔍 Enter city or location..."
-                    >
-
-                    <button
-                        type="button"
-                        id="searchLocationBtn">
-
-                        Search
-
+                    <button class="map-btn">
+                        View Full Map
                     </button>
 
                 </div>
 
 
-                <!-- LEAFLET MAP -->
+                <div class="map-placeholder">
 
-                <div
-                    id="riskMap"
-                    style="
-                        width: 100%;
-                        height: 500px;
-                        min-height: 500px;
-                    ">
-                </div>
+                    <div class="map-container">
 
 
-                <!-- MAP LEGEND -->
+                        <!-- LOCATION SEARCH -->
 
-                <div
-                    id="disasterHeatmapLegend"
-                    class="disaster-heatmap-legend">
+                        <div class="location-search">
 
-                    <div class="heatmap-legend-title">
-                        🗺️ LIVE RISK ZONES
+                            <input
+                                type="text"
+                                id="locationSearch"
+                                placeholder="🔍 Enter city or location..."
+                            >
+
+                            <button id="searchLocationBtn">
+                                Search
+                            </button>
+
+                        </div>
+
+
+                        <!-- LEAFLET MAP -->
+
+                        <div id="riskMap"></div>
+
+                        <!-- 🗺️ DYNAMIC DISASTER HEATMAP LEGEND -->
+
+<div id="disasterHeatmapLegend" class="disaster-heatmap-legend">
+
+    <div class="heatmap-legend-title">
+        🗺️ LIVE RISK ZONES
+    </div>
+
+    <div class="heatmap-legend-item">
+        <span class="heatmap-dot low"></span>
+        <span>LOW</span>
+    </div>
+
+    <div class="heatmap-legend-item">
+        <span class="heatmap-dot medium"></span>
+        <span>MEDIUM</span>
+    </div>
+
+    <div class="heatmap-legend-item">
+        <span class="heatmap-dot high"></span>
+        <span>HIGH</span>
+    </div>
+
+    <div class="heatmap-legend-item">
+        <span class="heatmap-dot critical"></span>
+        <span>CRITICAL</span>
+    </div>
+
+</div>
+                        <!-- MAP OVERLAY -->
+
+                        <div class="map-overlay">
+
+                            <div class="map-status">
+
+                                <span class="live-dot"></span>
+
+                                LIVE RISK MAP
+
+                            </div>
+
+<div class="map-layers">
+
+    <button
+        type="button"
+        class="layer-btn active"
+        data-hazard="all">
+        🌐 All
+    </button>
+
+    <button
+        type="button"
+        class="layer-btn"
+        data-hazard="Flood">
+        🌊 Flood
+    </button>
+
+    <button
+        type="button"
+        class="layer-btn"
+        data-hazard="Lightning">
+        ⚡ Lightning
+    </button>
+
+    <button
+        type="button"
+        class="layer-btn"
+        data-hazard="Storm">
+        ⛈️ Storm
+    </button>
+
+</div>
+
+                        </div>
+
                     </div>
 
-                    <div class="heatmap-legend-item">
-                        <span class="heatmap-dot low"></span>
-                        <span>LOW</span>
-                    </div>
 
-                    <div class="heatmap-legend-item">
-                        <span class="heatmap-dot medium"></span>
-                        <span>MEDIUM</span>
-                    </div>
+                    <div class="map-center">
 
-                    <div class="heatmap-legend-item">
-                        <span class="heatmap-dot high"></span>
-                        <span>HIGH</span>
-                    </div>
+                        <div class="map-pin">
+                            📍
+                        </div>
 
-                    <div class="heatmap-legend-item">
-                        <span class="heatmap-dot critical"></span>
-                        <span>CRITICAL</span>
-                    </div>
+                        <h3>
+                            Your Monitoring Area
+                        </h3>
 
-                </div>
+                        <p>
+                            Live interactive map will appear here
+                        </p>
 
 
-                <!-- MAP OVERLAY -->
+                        <div class="map-legend">
 
-                <div class="map-overlay">
+                            <span>
+                                <i class="safe-dot"></i>
+                                Safe
+                            </span>
 
-                    <div class="map-status">
+                            <span>
+                                <i class="watch-dot"></i>
+                                Watch
+                            </span>
 
-                        <span class="live-dot"></span>
+                            <span>
+                                <i class="warning-dot"></i>
+                                Warning
+                            </span>
 
-                        LIVE RISK MAP
+                            <span>
+                                <i class="critical-dot"></i>
+                                Critical
+                            </span>
 
-                    </div>
-
-
-                    <div class="map-layers">
-
-                        <button
-                            type="button"
-                            class="layer-btn active"
-                            data-hazard="all">
-
-                            🌐 All
-
-                        </button>
-
-
-                        <button
-                            type="button"
-                            class="layer-btn"
-                            data-hazard="Flood">
-
-                            🌊 Flood
-
-                        </button>
-
-
-                        <button
-                            type="button"
-                            class="layer-btn"
-                            data-hazard="Lightning">
-
-                            ⚡ Lightning
-
-                        </button>
-
-
-                        <button
-                            type="button"
-                            class="layer-btn"
-                            data-hazard="Storm">
-
-                            ⛈️ Storm
-
-                        </button>
+                        </div>
 
                     </div>
 
@@ -814,388 +528,116 @@
             </div>
 
 
-            <!-- MAP INFO -->
+            <!-- =================================================
+                 PREDICTION
+            ================================================== -->
 
-            <div class="map-center">
+            <div class="panel prediction-panel">
 
-                <div class="map-pin">
-                    📍
+                <div class="panel-header">
+
+                    <div>
+
+                        <h2>
+                            🔮 Risk Prediction
+                        </h2>
+
+                        <p>
+                            Next 6 hours
+                        </p>
+
+                    </div>
+
                 </div>
 
-                <h3>
-                    Your Monitoring Area
-                </h3>
 
-                <p>
-                    Live interactive map will appear here
-                </p>
+                <div class="timeline">
 
 
-                <div class="map-legend">
+                    <div class="time-item active">
+
+                        <span>
+                            NOW
+                        </span>
+
+                        <strong id="riskNow">
+                            32
+                        </strong>
+
+                        <small id="levelNow">
+                            WATCH
+                        </small>
+
+                    </div>
+
+
+                    <div class="time-item">
+
+                        <span>
+                            +1 HR
+                        </span>
+
+                        <strong id="risk1hr">
+                            38
+                        </strong>
+
+                        <small id="level1hr">
+                            WATCH
+                        </small>
+
+                    </div>
+
+
+                    <div class="time-item">
+
+                        <span>
+                            +3 HR
+                        </span>
+
+                        <strong id="risk3hr">
+                            47
+                        </strong>
+
+                        <small id="level3hr">
+                            WATCH
+                        </small>
+
+                    </div>
+
+
+                    <div class="time-item">
+
+                        <span>
+                            +6 HR
+                        </span>
+
+                        <strong id="risk6hr">
+                            61
+                        </strong>
+
+                        <small id="level6hr">
+                            WARNING
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="prediction-message">
 
                     <span>
-                        <i class="safe-dot"></i>
-                        Safe
+                        🤖
                     </span>
 
-                    <span>
-                        <i class="watch-dot"></i>
-                        Watch
-                    </span>
-
-                    <span>
-                        <i class="warning-dot"></i>
-                        Warning
-                    </span>
-
-                    <span>
-                        <i class="critical-dot"></i>
-                        Critical
-                    </span>
+                    <p>
+                        AI estimates increasing risk over the
+                        next few hours based on current conditions.
+                    </p>
 
                 </div>
 
             </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     🆘 DISASTERGUARD RELIEF CONNECT
-========================================================= -->
-
-<section class="relief-connect-section">
-
-    <div class="relief-header">
-
-        <div>
-
-            <span class="relief-badge">
-                🆘 EMERGENCY RELIEF
-            </span>
-
-            <h2>
-                DisasterGuard <span>Relief Connect</span>
-            </h2>
-
-            <p>
-                Flood affected people can request food, water,
-                medicine and emergency assistance.
-            </p>
-
-        </div>
-
-        <div class="relief-icon">
-            🛟
-        </div>
-
-    </div>
-
-
-    <!-- HELP REQUEST FORM -->
-
-    <div class="relief-form-card">
-
-        <h3>
-            🆘 Request Emergency Help
-        </h3>
-
-        <p class="form-subtitle">
-            Tell us what help is needed.
-        </p>
-
-
-        <form id="reliefRequestForm">
-
-
-            <!-- NAME -->
-
-            <div class="form-group">
-
-                <label>
-                    👤 Your Name
-                </label>
-
-                <input
-                    type="text"
-                    id="reliefName"
-                    placeholder="Enter your name"
-                    required
-                >
-
-            </div>
-
-
-            <!-- PHONE -->
-
-            <div class="form-group">
-
-                <label>
-                    📞 Phone Number
-                </label>
-
-                <input
-                    type="tel"
-                    id="reliefPhone"
-                    placeholder="Enter phone number"
-                    required
-                >
-
-            </div>
-
-
-            <!-- LOCATION -->
-
-            <div class="form-group">
-
-                <label>
-                    📍 Flood Affected Location
-                </label>
-
-                <input
-                    type="text"
-                    id="reliefLocation"
-                    placeholder="Example: Bihar, Patna"
-                    required
-                >
-
-            </div>
-
-
-            <!-- PEOPLE -->
-
-            <div class="form-group">
-
-                <label>
-                    👥 Number of People
-                </label>
-
-                <input
-                    type="number"
-                    id="reliefPeople"
-                    min="1"
-                    value="1"
-                    required
-                >
-
-            </div>
-
-
-            <!-- NEEDS -->
-
-            <div class="form-group">
-
-                <label>
-                    📦 What do you need?
-                </label>
-
-
-                <div class="relief-options">
-
-
-                    <label class="relief-option">
-
-                        <input
-                            type="checkbox"
-                            name="reliefNeed"
-                            value="Food"
-                        >
-
-                        <span>
-                            🍱 Food
-                        </span>
-
-                    </label>
-
-
-                    <label class="relief-option">
-
-                        <input
-                            type="checkbox"
-                            name="reliefNeed"
-                            value="Drinking Water"
-                        >
-
-                        <span>
-                            💧 Drinking Water
-                        </span>
-
-                    </label>
-
-
-                    <label class="relief-option">
-
-                        <input
-                            type="checkbox"
-                            name="reliefNeed"
-                            value="Medicine"
-                        >
-
-                        <span>
-                            💊 Medicine
-                        </span>
-
-                    </label>
-
-
-                    <label class="relief-option">
-
-                        <input
-                            type="checkbox"
-                            name="reliefNeed"
-                            value="Baby Supplies"
-                        >
-
-                        <span>
-                            🍼 Baby Supplies
-                        </span>
-
-                    </label>
-
-
-                    <label class="relief-option">
-
-                        <input
-                            type="checkbox"
-                            name="reliefNeed"
-                            value="Rescue"
-                        >
-
-                        <span>
-                            🛟 Rescue
-                        </span>
-
-                    </label>
-
-
-                </div>
-
-            </div>
-
-
-            <!-- EMERGENCY -->
-
-            <div class="form-group">
-
-                <label>
-                    🚨 Emergency Level
-                </label>
-
-
-                <select id="reliefEmergency">
-
-                    <option value="Critical">
-                        🔴 Critical
-                    </option>
-
-                    <option value="High">
-                        🟠 High
-                    </option>
-
-                    <option value="Medium" selected>
-                        🟡 Medium
-                    </option>
-
-                </select>
-
-            </div>
-
-
-            <!-- MESSAGE -->
-
-            <div class="form-group">
-
-                <label>
-                    📝 Additional Information
-                </label>
-
-                <textarea
-                    id="reliefMessage"
-                    rows="4"
-                    placeholder="Tell us about your situation..."
-                ></textarea>
-
-            </div>
-
-
-            <!-- SUBMIT -->
-
-            <button
-                type="submit"
-                class="relief-submit-btn"
-                id="reliefSubmitBtn">
-
-                🆘 REQUEST HELP
-
-            </button>
-
-
-            <!-- RESPONSE -->
-
-            <div
-                id="reliefResponse"
-                class="relief-response">
-            </div>
-
-
-        </form>
-
-    </div>
-
-</section>
-
-<div class="section-divider"></div>
-
-<!-- =========================================================
-     🤝 RELIEF REQUESTS DASHBOARD
-========================================================= -->
-
-<section class="relief-dashboard-section">
-
-    <div class="relief-dashboard-header">
-
-        <div>
-
-            <span class="relief-badge">
-                🤝 RELIEF NETWORK
-            </span>
-
-            <h2>
-                Relief <span>Requests Dashboard</span>
-            </h2>
-
-            <p>
-                Active emergency requests and verified nearby helpers.
-            </p>
-
-        </div>
-
-        <div class="relief-dashboard-icon">
-            🤝
-        </div>
-
-    </div>
-
-
-    <div
-        id="reliefRequestsContainer"
-        class="relief-requests-container">
-
-        <div class="relief-loading">
-            ⏳ Loading relief requests...
-        </div>
-
-    </div>
-
-</section>
-
-
-<div class="section-divider"></div>
-
 <!-- =========================================================
      🤖 AI RISK INTELLIGENCE
      PREMIUM 3D EXPLAINABLE RISK SYSTEM
@@ -5345,11 +4787,6 @@
     </div>
 
 </section>
-<!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-<!-- Main JavaScript -->
-<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
 
 </body>
 
